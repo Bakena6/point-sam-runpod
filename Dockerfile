@@ -33,7 +33,7 @@ FROM runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04
   RUN cd third_party/torkit3d && pip install .
 
   # Download model weights from HuggingFace
-  RUN python -c "from huggingface_hub import hf_hub_download; hf_hub_download('yuchen0187/Point-SAM', 'point_sam_vit_l.safetensors', local_dir='/app/weights')"
+  RUN python -c "from huggingface_hub import hf_hub_download; hf_hub_download('yuchen0187/Point-SAM', 'model.safetensors', local_dir='/app/weights')"
 
   # Copy handler
   COPY handler.py /app/handler.py
