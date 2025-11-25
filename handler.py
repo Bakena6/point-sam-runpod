@@ -29,7 +29,7 @@
 
       MODEL = PointSAM(
           encoder="vit_l",
-          checkpoint="/app/weights/point_sam_vit_l.safetensors"
+          checkpoint="/app/weights/model.safetensors"
       )
       MODEL.to(DEVICE)
       MODEL.eval()
